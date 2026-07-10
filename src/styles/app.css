@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-swim-50: #eff6ff;
+  --color-swim-100: #dbeafe;
+  --color-swim-200: #bfdbfe;
+  --color-swim-300: #93c5fd;
+  --color-swim-400: #60a5fa;
+  --color-swim-500: #2563eb;
+  --color-swim-600: #1d4ed8;
+  --color-swim-700: #1e3a5f;
+  --color-swim-800: #1e2d4a;
+  --color-swim-900: #0f1d35;
+  --color-teal-50: #f0fdfa;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-coral-400: #fb923c;
+  --color-coral-500: #f97316;
+  --color-coral-600: #ea580c;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-white text-slate-800 antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .gradient-swim {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0d9488 100%);
+  }
+  .gradient-swim-text {
+    background: linear-gradient(135deg, #2563eb 0%, #0d9488 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
